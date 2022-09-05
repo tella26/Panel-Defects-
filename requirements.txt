@@ -1,7 +1,7 @@
-einops==0.4.1
-matplotlib==3.5.3
-numpy==1.23.2
-torch==1.12.1
-torch_optimizer==0.3.0
-torchstat==0.0.7
-torchvision==0.13.1
+einops
+matplotlib
+numpy
+torch
+torch_optimizer
+torchstat
+torchvision
