@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Panel_defect_classification", "Panel_defect_classification.pyproj", "{B790C8A3-341D-4EDB-8625-65F13B29CF22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B790C8A3-341D-4EDB-8625-65F13B29CF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B790C8A3-341D-4EDB-8625-65F13B29CF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {28B60E91-0723-4D2A-8BB1-47C2041D1701}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{b790c8a3-341d-4edb-8625-65f13b29cf22}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>AlexNet.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>Pytest</TestFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Images\alexnet.png" />
+    <Content Include="Images\batchnorm.png" />
+    <Content Include="Images\channelshuffle.png" />
+    <Content Include="Images\cnn.jpg" />
+    <Content Include="Images\Densenet.png" />
+    <Content Include="Images\efficientnet.png" />
+    <Content Include="Images\efficientnetv2.png" />
+    <Content Include="Images\googlenet.png" />
+    <Content Include="Images\inceptionv3.png" />
+    <Content Include="Images\mlpmixer.png" />
+    <Content Include="Images\mobilenetv1.png" />
+    <Content Include="Images\mobilenetv2.png" />
+    <Content Include="Images\nin.png" />
+    <Content Include="Images\resmlp.png" />
+    <Content Include="Images\resnet.png" />
+    <Content Include="Images\resnext.png" />
+    <Content Include="Images\senet.png" />
+    <Content Include="Images\shufflenet.png" />
+    <Content Include="Images\squeezenet.png" />
+    <Content Include="Images\vggnet.png" />
+    <Content Include="Images\Xception.png" />
+    <Content Include="plot\alexnet_train_test_acc.png" />
+    <Content Include="plot\alexnet_train_test_loss.png" />
+    <Content Include="plot\efficientnetv2_train_test_acc.png" />
+    <Content Include="plot\efficientnetv2_train_test_loss.png" />
+    <Content Include="plot\gmlp_train_test_acc.png" />
+    <Content Include="plot\gmlp_train_test_loss.png" />
+    <Content Include="plot\mlpmixer_train_test_acc.png" />
+    <Content Include="plot\mlpmixer_train_test_loss.png" />
+    <Content Include="plot\resmlp_train_test_acc.png" />
+    <Content Include="plot\resmlp_train_test_loss.png" />
+    <Content Include="plot\ResnetWithSAM_train_test_loss.png" />
+    <Content Include="plot\resnetwith_SAM__train_test_acc.png" />
+    <Content Include="plot\resnet_train_test_acc.png" />
+    <Content Include="plot\resnet_train_test_loss.png" />
+    <Content Include="plot\senet_train_test_acc.png" />
+    <Content Include="plot\senet_train_test_loss.png" />
+    <Content Include="plot\vit_train_test_acc.png" />
+    <Content Include="plot\vit_train_test_loss.png" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlexNet.py" />
+    <Compile Include="augmentations.py" />
+    <Compile Include="BatchNorm_ConvNet.py" />
+    <Compile Include="convNet.py" />
+    <Compile Include="Darknet53.py" />
+    <Compile Include="dataset.py" />
+    <Compile Include="DenseNet.py" />
+    <Compile Include="EfficientNet.py" />
+    <Compile Include="EfficientNetV2.py" />
+    <Compile Include="gMLP.py" />
+    <Compile Include="GoogLeNet.py" />
+    <Compile Include="InceptionV3.py" />
+    <Compile Include="main.py" />
+    <Compile Include="MLPMixer.py" />
+    <Compile Include="MobileNetV1.py" />
+    <Compile Include="MobileNetV2.py" />
+    <Compile Include="NiN.py" />
+    <Compile Include="optimizer.py" />
+    <Compile Include="plot.py" />
+    <Compile Include="ResMLP.py" />
+    <Compile Include="ResNet.py" />
+    <Compile Include="ResNeXt.py" />
+    <Compile Include="SAM.py" />
+    <Compile Include="SENet.py" />
+    <Compile Include="ShuffleNet.py" />
+    <Compile Include="SqueezeNet.py" />
+    <Compile Include="trainAndTestWithSAM.py" />
+    <Compile Include="train_test.py" />
+    <Compile Include="VGG.py" />
+    <Compile Include="ViT.py" />
+    <Compile Include="Xception.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images" />
+    <Folder Include="plot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>0.0</Version>
+      <Description>env (Python 3.10 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

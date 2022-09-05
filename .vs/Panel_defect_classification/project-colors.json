@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b790c8a3-341d-4edb-8625-65f13b29cf22": {
+      "ProjectGuid": "b790c8a3-341d-4edb-8625-65f13b29cf22",
+      "DisplayName": "Panel_defect_classification",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
