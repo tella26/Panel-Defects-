@@ -4,5 +4,5 @@ parameters:
   batch_size: 128
   image_resolution: 224
   MNIST: False
-  n_classes: 11
+  n_classes: 12
   optimizer: sgd
