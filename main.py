@@ -41,6 +41,8 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 """ Initialize model based on command line argument """
 model_parser = argparse.ArgumentParser(description='Image Classification Using PyTorch', usage='[option] model_name')
 model_parser.add_argument('--model', type=str, required=True)
+model_parser.add_argument('--train_path', type=str, required=True)
+model_parser.add_argument('--test_path', type=str, required=True)
 model_parser.add_argument('--model_save', type=bool, required=False)
 model_parser.add_argument('--checkpoint', type=bool, required=False)
 model_parser.add_argument('--sam', type=bool, required=False)
@@ -55,8 +57,10 @@ try:
 except FileNotFoundError:
     print("Config file missing")
 
+
 """Dataset Initialization"""
-data_initialization = initialize_dataset(image_resolution=config['parameters']['image_resolution'], batch_size=config['parameters']['batch_size']
+data_initialization = initialize_dataset(image_resolution=config['parameters']['image_resolution'], batch_size=config['parameters']['batch_size'],
+                       test_path=args.test_path,  train_path=args.train_path
                       #MNIST=config['parameters']['MNIST']
                       )
 train_dataloader, test_dataloader = data_initialization.load_dataset(transform=True)

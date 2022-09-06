@@ -4,13 +4,15 @@ from augmentations import augmentation, ContrastiveAugmentation
 import torchvision.transforms as transforms
 
 class initialize_dataset:
-    def __init__(self, image_resolution=224, batch_size=128, MNIST=False):
+    def __init__(self, image_resolution=224, batch_size=128, MNIST=False, train_path='',  test_path= ''):
         self.image_resolution= image_resolution
         self.batch_size=batch_size
         self.MNIST = MNIST
+        self.train_path = train_path
+        self.test_path = test_path
   
     def load_dataset(self, transform=False):
-        path = "./data"
+        path = "../data"
         #path = './data'
         if transform:
             transform = augmentation(image_resolution=self.image_resolution)
@@ -36,13 +38,16 @@ class initialize_dataset:
                                                         shuffle=True)
         else:
             train_dataloader = torch.utils.data.DataLoader(
-                torchvision.datasets.ImageFolder('./train_data',
+                torchvision.datasets.ImageFolder(root=self.test_path,
                             transform=transforms.Compose([
+                                transforms.Resize((224, 224)),
                                 transforms.ToTensor()
                             ])),
                 batch_size=self.batch_size, shuffle=True)
             test_dataloader = torch.utils.data.DataLoader(
-                torchvision.datasets.ImageFolder('./test_data', transform=transforms.Compose([
+                torchvision.datasets.ImageFolder(root=self.train_path,
+                            transform=transforms.Compose([
+                                transforms.Resize((224, 224)),
                                 transforms.ToTensor()
                             ])),
                 batch_size=self.batch_size, shuffle=True)
