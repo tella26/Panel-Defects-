@@ -4,7 +4,7 @@ from augmentations import augmentation, ContrastiveAugmentation
 import torchvision.transforms as transforms
 
 class initialize_dataset:
-    def __init__(self, image_resolution=224, batch_size=128, MNIST=False, train_path='',  test_path= ''):
+    def __init__(self, image_resolution=224, batch_size=128, MNIST=False, test_path= '', train_path=''):
         self.image_resolution= image_resolution
         self.batch_size=batch_size
         self.MNIST = MNIST
