@@ -36,13 +36,13 @@ class initialize_dataset:
                                                         shuffle=True)
         else:
             train_dataloader = torch.utils.data.DataLoader(
-                torchvision.datasets.ImageFolder('./data',
+                torchvision.datasets.ImageFolder('./train_data',
                             transform=transforms.Compose([
                                 transforms.ToTensor()
                             ])),
                 batch_size=self.batch_size, shuffle=True)
             test_dataloader = torch.utils.data.DataLoader(
-                torchvision.datasets.ImageFolder('./data', transform=transforms.Compose([
+                torchvision.datasets.ImageFolder('./test_data', transform=transforms.Compose([
                                 transforms.ToTensor()
                             ])),
                 batch_size=self.batch_size, shuffle=True)

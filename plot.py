@@ -11,9 +11,8 @@ def trainTestPlot(plot, train_accu, test_accu, train_losses, test_losses, model_
         plt.xlabel('epoch')
         plt.ylabel('accuracy')
         plt.legend(['Train','Test'])
-        plt.title('Train vs Test Accuracy') 
-        plt.tight_layout()           
-        plt.savefig('plots/'+model_name+'_train_test_acc.png')
+        plt.title('Train vs Test Accuracy')          
+        plt.savefig('plot/'+model_name+'_train_test_acc.png')
 
         plot2 = plt.figure(2)
         plt.plot(train_losses,'-o')
@@ -22,5 +21,4 @@ def trainTestPlot(plot, train_accu, test_accu, train_losses, test_losses, model_
         plt.ylabel('losses')
         plt.legend(['Train','Test'])
         plt.title('Train vs Test Losses')
-        plt.tight_layout()
-        plt.savefig('plots/'+model_name+'_train_test_loss.png')
+        plt.savefig('plot/'+model_name+'_train_test_loss.png')

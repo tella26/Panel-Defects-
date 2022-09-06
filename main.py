@@ -6,10 +6,13 @@ from torchstat import stat
 
 from convNet import CNN
 from AlexNet import AlexNet
-from DenseNet import DenseNet
+from DenseNet import Bottleneck, DenseNet
 from GoogLeNet import GoogLeNet
 from ResNet import ResNet
 from ResNet34 import ResNet34
+from ResNet50 import ResNet50, Bottleneck
+from ResNet101 import ResNet101,  Bottleneck
+from ResNet152 import ResNet152,  Bottleneck
 from SENet import SENet
 from VGG import VGG11
 from NiN import NIN
@@ -74,11 +77,20 @@ elif args.model == 'alexnet':
 elif args.model == 'senet':
     model = SENet(input_channel=input_channel, n_classes=n_classes).to(device)
 
-elif args.model == 'resnet':
+elif args.model == 'resnet18':
     model = ResNet(input_channel=input_channel, n_classes=n_classes).to(device)
 
 elif args.model == 'resnet34':
         model = ResNet34(input_channel=input_channel, n_classes=n_classes).to(device)
+
+elif args.model == 'resnet50':
+        model = ResNet50( Bottleneck, num_channels=input_channel, num_classes=n_classes).to(device)
+        
+elif args.model == 'resnet101':
+        model = ResNet101(Bottleneck, num_channels=input_channel, num_classes=n_classes).to(device)
+        
+elif args.model == 'resnet152':
+        model = ResNet152(Bottleneck, num_channels=input_channel, num_classes=n_classes).to(device)
 
 elif args.model == 'densenet':
     model = DenseNet(input_channel=input_channel, n_classes=n_classes, 
