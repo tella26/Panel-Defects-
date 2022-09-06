@@ -1,8 +1,8 @@
 parameters:
-  num_epochs: 2
+  num_epochs: 3
   learning_rate: 0.001
   batch_size: 128
   image_resolution: 224
   MNIST: False
-  n_classes: 3
+  n_classes: 11
   optimizer: sgd
