@@ -10,9 +10,8 @@ class initialize_dataset:
         self.train_path = train_path
         self.test_path = test_path
   
-    def load_dataset(self, transform=False):
+    def load_dataset(self, transform=True):
         path = "../data"
-        #path = './data'
         if transform:
             transform = augmentation(image_resolution=self.image_resolution)
         else:
