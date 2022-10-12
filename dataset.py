@@ -16,8 +16,7 @@ class initialize_dataset:
             transform = augmentation(image_resolution=self.image_resolution)
         else:
             transform = transforms.Compose([transforms.ToTensor(), transforms.Resize((self.image_resolution, self.image_resolution)),
-                       transforms.RandomHorizontalFlip(),transforms.RandomRotation(20),
-                                            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
+                       transforms.RandomHorizontalFlip(), transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
         train_dataloader = torch.utils.data.DataLoader(
                 torchvision.datasets.ImageFolder(root=self.test_path,
                             transform=transforms.Compose([
