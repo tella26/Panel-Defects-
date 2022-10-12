@@ -4,19 +4,20 @@ from augmentations import augmentation
 import torchvision.transforms as transforms
 
 class initialize_dataset:
-    def __init__(self, image_resolution=224, batch_size=128, test_path= '', train_path=''):
+    def __init__(self, image_resolution=224, batch_size=25, test_path= '', train_path=''):
         self.image_resolution= image_resolution
         self.batch_size=batch_size
         self.train_path = train_path
         self.test_path = test_path
   
-    def load_dataset(self, transform=True):
+    def load_dataset(self, transform=False):
         path = "../data"
         if transform:
             transform = augmentation(image_resolution=self.image_resolution)
         else:
             transform = transforms.Compose([transforms.ToTensor(), transforms.Resize((self.image_resolution, self.image_resolution)),
-                        transforms.RandomHorizontalFlip(), transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
+                       transforms.RandomHorizontalFlip(0.9), transforms.CenterCrop(10), transforms.RandomRotation(20),
+                                            transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])])
         train_dataloader = torch.utils.data.DataLoader(
                 torchvision.datasets.ImageFolder(root=self.test_path,
                             transform=transforms.Compose([
