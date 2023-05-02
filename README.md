@@ -21,7 +21,7 @@ You can find the Electroluminiscence PV (ELPV) dataset below:
   
     The Elpv-12 dataset classifications with 11 defect classes including non defect class.
 </p>
- <img src="plot/Model losses.png" alt="dataset">
+ <img src="Images/dataset.png" alt="dataset">
 </details>
 
 ### 🗒 Models Implementation with accuracy results
