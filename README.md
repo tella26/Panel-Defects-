@@ -34,8 +34,8 @@ Transformer (Vit), YOLOv3 (DarkNet53), and SqueezeNet.
 
 Google Colab Premium of 14GB GPU was used for the training.
 
-|Computer Vision Based Models   | ELPV-4 Accuracy | ELPV-2 Accuracy | ELPV-12 Accuracy |
-| :---        | :----:       | :----:       | :----:       | :----:       | :---:       |
+| Computer Vision Based Models   | ELPV-4 Accuracy | ELPV-2 Accuracy | ELPV-12 Accuracy |
+| :---        | :----:       | :----:       | :----:       | 
 | [AlexNet](https://papers.nips.cc/paper/2012/hash/c399862d3b9d6b76c8436e924a68c45b-Abstract.html")| 67.62 | 62.12 | 83.85 |
 | [SENet](https://arxiv.org/abs/1709.01507)   | 54.60 | 71.16 | 82.78 | 
 | [ResNet18](https://arxiv.org/abs/1512.03385)  | 54.18 | 73.02 | 85.72 |
@@ -110,7 +110,7 @@ The plots for test accuracy and  test loss
 </details>
 
 <details>
-  <summary>🔥 Accuracy </summary>
+  <summary>🔥 Loss </summary>
 <p>
   
     Loss plot results on the elpv-2 dataset
