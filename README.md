@@ -87,11 +87,11 @@ drive.mount('/content/drive')
 ```
 ### To Save Model
 ```python
-python main.py --model=resnet --model_save=True
+!python main.py --model=resnet34 --model_save=True
 ```
 ### To Create Checkpoint
 ```python
-python main.py --model=resnet --checkpoint=True
+!python main.py --model=resnet34 --checkpoint=True
 ```
 
 <!--##########################################################################################-->
