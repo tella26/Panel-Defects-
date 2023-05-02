@@ -1,10 +1,14 @@
 """
 
 Below is a ResNet18 architecture:
+Residual Network (ResNet) uses the concept of residual blocks that helps address the issue of vanishing
+gradient in feedforward networks. The gradient in conventional deep learning networks is backpropagated to the previous
+layers and the more deeper the network, the smaller the gradient. This can affect the performance of the networks.
+So, one way of solving this problem was the introduction of shortcut connections to fully connected layers which simply
+perform identity mapping (known as residual mapping). Some of the common variants of ResNets includes 18,34,50,101 and
+152 which have stacks of residual or bottleneck blocks. The residual block comprises of two convolutional layers, and
+it is used in ResNet18 and ResNet34, while the bottleneck has three convolutional layers for other variants. The bottleneck was introduced to allow fast training
 
-There are 4 convolutional layers in each module (excluding the 1×1 convolutional layer). 
-Together with the first 7×7 convolutional layer and the final fully-connected layer, there are 
-18 layers in total. Therefore, this model is a ResNet-18.
 """
 import torch.nn as nn
 from torch.nn import functional as F

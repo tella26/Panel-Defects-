@@ -1,10 +1,11 @@
 """
 Darknet-53
 
-Darknet-53 is the backbone architecture of the YOLOV3, an Object detection model. Similar to
-Darknet-53, there is Darknet-19, which is the backbone for YOLOV2 model. Darknet has it roots
-in VGG network with most of the conv layers begin 3x3. In addition to VGGNet, Darknet-53 includes
-residual connection as in ResNet model.
+It is one of the variants of Yolo based models that are known for real time object detection
+problems. Other variants include YOLOv2, YOLOv4, YOLOR (You Only Learn One Representation), YOLOX, PPYOLOE,
+YOLOv5 and YOLOv7. YOLOv3 uses the concept of residual connection with 3x3 and 1x1 convolutional layers. This is then
+stacked together to have a total of 53 convolutional layers in the network. It is sometimes called DarkNet-53 because
+of the 53 convolutional layers and the use of darknet neural network framework.
 
 """
 import torch

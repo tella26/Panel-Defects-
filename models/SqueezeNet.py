@@ -1,25 +1,12 @@
 """
 SqueezeNet
 
-This network is known for providing AlexNet-Level accuracy at 50 times fewer parameters.
-This small architecture offers three major advantages, first, it requires less bandwidth
-for exporting the model and then it requires less communication between server during 
-distributed training and more feasible to deploy on FPGAs.
-
-Archiecture creates Fire module containing a squeeze convolution layer (which has only 
-1×1 filters), feeding into an expand layer that has a mix of 1×1 and 3×3 convolution filters.
-
-To reduce the parameters the architecture follows design strategies
-
-1. Using Conv1x1 over Conv3x3
-2. Decreasing number of channels using Squeeze Layers
-3. Downsample late in the network, such that convolution
-layers have large activation maps.
-
-1 and 2 helps in reducing the parameters, and 3 helps in higher classification accuracy
-because of large activation maps.
-
-Reference: https://towardsdatascience.com/review-squeezenet-image-classification-e7414825581a
+is a small CNN architecture that has accuracy compared with that of AlexNet despite having almost
+50 times fewer parameters [15]. The aim of the network is to have fewer parameters while maintaining higher accuracy.
+The architecture used the concept of fire module consisting of squeeze convolution layer with 1x1 filter, and Two, 1x1 and
+3x3, expanded convolution layers. The squeeze layer helps decrease the number of input channels to 3x3 filters and also
+many of the 3x3 filters are replaced with 1x1 filters. Each replacement accounts for 9 times fewer parameters which then
+facilitates reduction in the network.
 
 """
 import math

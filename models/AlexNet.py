@@ -1,26 +1,9 @@
 """
-Before AlexNet, SIFT(scale-invariant feature transform), SURF or HOG were some of the hand tuned feature extractors for Computer Vision.
+It is a sequential model with eight layers consisting of five convolutional layers followed by maxpooling
+and the last three are fully connected layers. It has 60 million parameters and 650,000 neurons. The architecture was
+developed to support training on Multiple GPUs which reduces training time. This was because of the limited memory of 3GB
+for early GPUs which has been increased up to 80GB nowadays.
 
-In AlexNet, Interestingly in the lowest layers of the network, the model learned feature extractors that resembled some traditional filters.
-Higher layers in the network might build upon these representations to represent larger structures, like eyes, noses, blades of grass, and so on.
-Even higher layers might represent whole objects like people, airplanes, dogs, or frisbees. Ultimately, the final hidden state learns a compact
-representation of the image that summarizes its contents such that data belonging to different categories can be easily separated.
-
-Challenges perceived before AlexNet:
-
-Computational Power:
-
-Due to the limited memory in early GPUs, the original AlexNet used a dual data stream design, so that each of their two GPUs could be responsible
-for storing and computing only its half of the model. Fortunately, GPU memory is comparatively abundant now, so we rarely need to break up models
-across GPUs these days.
-
-Data Availability:
-
-ImageNet was released during this period by researchers under Fei-Fei Li with 1 million images, 1000 images per class with total of 1000 class.
-
-Note:
-
-Instead of using ImageNet, I am using MNIST and resizing the image to 224 x 224 dimension to make it justify with the AlexNet architecture.
 """
 import torch.nn as nn
 

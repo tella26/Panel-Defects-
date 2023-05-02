@@ -1,5 +1,4 @@
 """
-BatchNorm - https://en.wikipedia.org/wiki/Batch_normalization
 
 It is a simple CNN architecture with combination of ideas from different researches
 with batchNorm, activation function, kernels etc.

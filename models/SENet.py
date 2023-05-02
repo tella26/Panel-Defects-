@@ -1,31 +1,12 @@
 """
 Squeeze and Excitation Network
 
-A typical convolution network has kernels running through image channels and combining
-the feature maps generated per channel. For each channel, we'll have separate kernel which
-learns the weights through backpropagation.
+It uses the concept of Squeeze-and-Excitation (SE) block that helps to model the interdependencies between
+channel of images so that it can be sensitive to features. The squeeze operation or global information embedding involves
+converting feature maps into single value for each channel using global average pooling. The excitation operation or
+adaptive recalibration is then used to convert the single value to a channel weight of the same size as the input. The SE blocks
+are stacked with other architectures like ResNet and Inception that utilize residual and inception module respectively
 
-The idea is to understand the interdependencies between channels of the images by explicitly
-modeling on it and hence to make the network sensitive to informative features which is further
-exploited in the next set of transformation.
-
-* Squeeze(Global Information Embedding) operation converts feature maps into single value per channel.
-* Excitation(Adaptive Recalibration) operation converts this single value into per-channel weight.
-
-Squeeze turns (C x H x W) into (C x 1 x 1) using Global Average Pooling.
-Excitation turns (C x 1 x 1) into (C x H x W) channel weights using 2 FC layer with activation function
-inbetween, then which is expanded as same size as input.
-
-Rescale the output from excitation operation into feature maps as earlier.
-
-Based on the depth of the network, the role played by SE operation is differs. At early layers,
-it excites shared low level representation irrespective of the classes. But in later stage, SE 
-network responds differently based input class.
-
-SE Block is simple and is added with existing CNN architecture to enhance the performance like 
-ResNet or Inception V1 etc.
-
-Reference: https://amaarora.github.io/2020/07/24/SeNet.html
 """
 import torch.nn as nn
 from ResNet import residualBlock

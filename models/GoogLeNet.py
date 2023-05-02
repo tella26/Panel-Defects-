@@ -1,18 +1,9 @@
 """
-In AlexNet, we've used 11x11 Conv, in NIN, we used 1x1 Conv. And in this paper, we identify
-among different kernel, which sized convolutional kernels are best. It is the version 1 of Inception
-model. 
-
-GoogLeNet introduces the concept of parallel concatenation of networks. We bulid Inception block and 
-which is repeated in the architecture.
-
-Some intution on the architecture, since the various different sized filters are at work, different spatial
-relations are extracted by different filters efficiently. It also allocates different amt of parameters
-across different filters.
-
-* 1×1 convolutions reduce channel dimensionality on a per-pixel level. Maximum pooling reduces the resolution.
-* If you're wondering how these dimensions were decided, it is based on trial and error & based on ImageNet 
-Dataset
+It involves applying the concept of inception module in the network. This helps to focus on efficiency
+by using 1x1 bottleneck convolutions and pooling instead of fully connected layers. The bottleneck is for channel
+dimensionality reduction. Unlike AlexNet that is a sequential model, GoogleNet has a parallel concatenation of networks
+with 22 layers and 5.98 million parameters. This is 12 times lesser than the number of parameters in AlexNet.
+ I has naıve version of the Inception module without bottleneck and with bottleneck.
 
 """
 import torch

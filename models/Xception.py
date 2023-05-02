@@ -5,10 +5,6 @@ The network uses a modified version of Depthwise Seperable Convolution. It combi
 ideas from MobileNetV1 like depthwise seperable conv and from InceptionV3, the order 
 of the layers like conv1x1 and then spatial kernels.
 
-In modified Depthwise Seperable Convolution network, the order of operation is changed
-by keeping Conv1x1 and then the spatial convolutional kernel. And the other difference
-is the absence of Non-Linear activation function. And with inclusion of residual 
-connections impacts the performs of Xception widely.
 
 """
 import torch
